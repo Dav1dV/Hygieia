@@ -45,6 +45,12 @@ services:
     depends_on:
       - db-setup
 
+  aws-cloud-collector:
+    build: collectors/cloud/aws
+    image: hygieia-aws-cloud-collector
+    depends_on:
+      - db-setup
+
   artifactory-artifact-collector:
     build: collectors/artifact/artifactory
     image: hygieia-artifactory-artifact-collector
