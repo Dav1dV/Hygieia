@@ -39,6 +39,16 @@ services:
     ports:
       - "3000:80"
 
+  https-proxy:
+    image: yajo/https-proxy
+    depends_on:
+      - ui
+    links:
+      - ui:www
+    ports:
+      - "80:80"
+      - "443:443"
+
   appdynamics-collector:
     build: collectors/performance/appdynamics
     image: hygieia-appdynamics-collector
