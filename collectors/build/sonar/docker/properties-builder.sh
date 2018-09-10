@@ -26,6 +26,9 @@ sonar.metrics[0]=${SONAR_METRICS:-ncloc,line_coverage,violations,critical_violat
 #Sonar Version - see above for semantics between version/metrics
 sonar.versions[0]=${SONAR_VERSION}
 
+# Temp for debugging:
+logging.level.com.capitalone.dashboard.collector=DEBUG
+logging.level.com.capitalone.dashboard=DEBUG
 EOF
 
 echo "
